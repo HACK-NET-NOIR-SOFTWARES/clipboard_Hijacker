@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <link rel="stylesheet" href="style/redirect.css">  
+</head>
+<body>
+<div class="container">
+    <div class="count" id="">
+        <p id="no" class="no">60</p>
+    </div>
+    <h5 style="color: red;" class="note"> Will Redirect you to Commerical Coinbase to make a membership payment to <span style="color: white; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900; ">HACK NET.</span> Copy the transaction ID that will be emailed to you from Commericial Coinbase and input it in the previous page. Our API connects to Commerical Coinbase for Transaction ID verification and once verified a membership Token will be displayed on your screen, copy it, keep it safe and input it to download your packaged malware to your drive for attacking, do not share you membership Token to anyone</h5>
+    <p class="accNet">A Hack Net membership give your full access to all Hack Net:
+    </p>
+    <ul>
+      <li>Softwares</li>
+      <li>Hack Net Coummunity</li>
+      <li>Eligibility to participate in Hack Net Hacktons</li>
+      <li>Hack Net Hacking Training and Tutorials</li>
+      <li>Eligibility to access open source  Hacked Documents, Softwares, Websites and Credit Card</li>
+    </ul>
+</div>
+    
+    <script>
+        let no = document.getElementById('no')
+
+         let thrity = 60
+        function countDown() {
+            thrity--
+            console.log(thrity)
+            no.innerHTML = thrity
+        }
+        var thrityVar = setInterval(countDown, 1000)
+        function clearing() {
+            if(thrity == 0) {
+            clearInterval(thrityVar)
+            window.location.href = "https://commerce.coinbase.com/checkout/2c0574d9-d842-44b2-b4b6-10c004d57d44"
+          }
+        }
+        setInterval(clearing, 500)
+        // var int6 = window.setInterval("countDown()", 1000)
+// window.setTimeout(function(){
+//  clearInterval(int6);
+// },30000);
+    </script>
+</body>
+</html>

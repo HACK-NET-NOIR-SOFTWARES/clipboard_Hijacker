@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/token.css">  
+  <title>token</title>
+</head>
+<body onload="loading()">
+  <div class="body">
+    <div class="popup">
+      <h2>Processing malware...</h2>
+      <p id="packing"></p>
+      <p id="done" style="color : white;"></p>
+      <div  id="form" class="form">
+        <!-- <form>
+          <p id="tokenNote" style="color: whitesmoke"></p>
+          <input type="text" class="input" id="tokenInput" onchange="tokenCheck()" required placeholder="Enter token">
+        </form> -->
+        <p id="tokenNote" style="color: whitesmoke"></p>
+        <input type="text" class="input" id="tokenInput" onchange="tokenCheck()" required placeholder="Enter token">
+        
+        <p onclick="hash()"><a href="goggle.com" target="_blank">Join membership</a></p>
+        <div id="hashMe" class="hash">
+    
+           <input id="hashInput" type="text" onchange="hashIn()" placeholder="membership order id">
+           <p id="hashNote" style="color:whitesmoke"></p>
+        </div>
+      </div>
+      
+  </div>
+  </div>
+<script>
+    var write = document.getElementById('packing')
+    var tokenNote = document.getElementById('tokenNote')
+    var hashInput = document.getElementById('hashInput')
+    var hashNote = document.getElementById('hashNote')
+    var hashMe = document.getElementById('hashMe')
+    var done = document.getElementById('done')
+    var form = document.getElementById('form')
+   var tokenInput = document.getElementById('tokenInput')
+   var slectedOption = localStorage.getItem('slectedOption')
+   var device = localStorage.getItem('device')
+   var name = localStorage.getItem('name')
+    
+
+    function loading() {
+      if(slectedOption == null && name == null) {
+    window.location.href = "index.html"
+   }
+      if(localStorage.getItem('fileDownloadCheck') == true) {
+    window.location.href = "index.html"
+    } 
+  }
+   
+  
+   form.style.display = 'none'
+   var writeNo = 1;
+   var type 
+   if(slectedOption == "image") {
+    type = "png"
+   } else if(slectedOption == "video") {
+    type = "mp4"
+   } else if(slectedOption == "audio") {
+    type = "mp3"
+   }
+ function run1() {
+   write.innerText = "packaging tot..."
+ }
+ function run2() {
+   write.innerText = "connecting payload backdoor"
+ }
+ function run3() {
+   write.innerText = "antiviruse marge " + device
+ }
+ function run4() {
+   write.innerText = "cloning into " + device
+ }
+ function run5() {
+   write.innerText = "runz psk"
+ }
+ function run6() {
+   write.innerText = "psk accessing " + slectedOption + " as traget point"
+ }
+ function run7() {
+  write.innerText = "download file." + type
+ }
+ function run8() {
+
+   let i=1;
+  function per() {
+    var rand = Math.floor(Math.random() * 5);
+    i+=rand
+    if(i >= 100) {
+      write.innerText = "Final packaging completed, ready for download '" + name + "' " + "100" + "%";
+    } else {
+      write.innerText = "Processing  '" + name + "' " + i + "%";
+    }
+      
+      // alert("downloading '" + name + "' " + i + "%" + " " + rand)
+  }
+  var tim = setInterval(per, 1000);
+  function stop() {
+    if(i>=100) {
+      clearInterval(tim)
+      done.innerText = "Done. " + name + " is ready to be downloaded into your drive for testing or attacking. Kindly input your membership token to HACK NET"
+      form.style.display = 'block'
+      clearInterval(stopp)
+      hashMe.style.display = 'none'
+  } 
+  }
+
+  var stopp = setInterval(stop, 1000)
+
+}
+
+
+ var int1 = window.setInterval("run1()", 3000)
+ window.setTimeout(function(){
+ clearInterval(int1);
+},6000);
+var int2 = window.setInterval("run2()", 6000)
+window.setTimeout(function(){
+ clearInterval(int2);
+},9000);
+var int3 = window.setInterval("run3()", 9000)
+window.setTimeout(function(){
+ clearInterval(int3);
+},12000);
+var int4 = window.setInterval("run4()", 12000)
+window.setTimeout(function(){
+ clearInterval(int4);
+},20000);
+var int5 = window.setInterval("run5()", 20000)
+window.setTimeout(function(){
+ clearInterval(int5);
+},30000);
+var int6 = window.setInterval("run6()", 30000)
+window.setTimeout(function(){
+ clearInterval(int6);
+},32000);
+var int7 = window.setInterval("run7()", 32000)
+window.setTimeout(function(){
+ clearInterval(int7);
+},34000);
+var int8 = window.setInterval("run8()", 34000)
+window.setTimeout(function(){
+ clearInterval(int8);
+},50000);
+
+function hash() {
+  hashMe.style.display = 'block'
+}
+
+function tokenCheck() {
+  document.getElementById('tokenInput')
+  console.log(tokenInput.value)
+ if(tokenInput.value == "1000nethacker") {
+  localStorage.setItem('fileDownloadCheck', true)
+  window.location.href = "redirect.html"
+ }else {
+  tokenNote.innerText = "Incorrect Token"
+ }
+}
+
+function hashIn() {
+  if(hashInput.value != "scammed") {
+    hashNote.innerHTML = "Incorrect Access ID";
+ }else {
+  hashNote.innerHTML = "Malware downloaded successfully. Carefully deploy to victims. Mode of deploy: Email, Social Media, Streaming Platforms, Wifi, LAN";
+ }
+}
+</script>
+</body>
+</html>

