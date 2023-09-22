@@ -1,0 +1,46 @@
+.count {
+    border: 2px solid #e0de9d;
+    border-radius: 50px;
+    width: 3em;
+    position: absolute;
+    left: 80%;
+    top:1px;
+    margin-top: 2em;
+    box-shadow: 0 2px 5px rgba(216, 241, 202, 0.712);
+}
+
+body {
+    position: relative;
+     background-color: black;
+     color: white;
+     font-family: "Courier New", monospace;
+   }
+
+   .container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: black;
+    padding: 2em;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+  }
+  
+  .note {
+   text-align: justify;
+   margin-top: 5em;
+  }
+
+  .no {
+    text-align: center;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  li:before {
+    background-color: wheat;
+  }
+  ul {
+    margin-top: 0px;
+  }
+  .accNet {
+    margin-bottom: 0px;
+  }

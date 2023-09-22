@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: lime;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+.popup {
+    position: absolute;
+    margin: 50px auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 30px 25px;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+  }
+
+  .hash {
+    text-align: left;
+  }
+ input {
+    width: 100%;
+}
+
+.form {
+    text-align: left;
+}
