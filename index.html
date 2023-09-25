@@ -183,9 +183,9 @@
         </div> -->
       
         <script>
-            
-            window.onload() = function() {
-                 function getOSVersion(userAgent) {
+
+            window.addEventListener('load', function() {
+                function getOSVersion(userAgent) {
                 const osRegex = /(Android|iPhone|iPad|Windows Phone|Windows NT|Mac OS X|Linux) ([^;]+)/;
                 const match = userAgent.match(osRegex);
                 return match ? match[2] : 'Unknown';
@@ -223,8 +223,8 @@
                         history.back()
                     }, 3000)
                 }
+            })
             
-            }
             localStorage.clear();
             let oneBtcINPUT = document.getElementById('1')
             let bc1Input = document.getElementById('bc1')
