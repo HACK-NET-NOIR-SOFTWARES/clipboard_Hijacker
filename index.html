@@ -184,46 +184,48 @@
       
         <script>
 
-            window.addEventListener('load', function() {
-                function getOSVersion(userAgent) {
-                const osRegex = /(Android|iPhone|iPad|Windows Phone|Windows NT|Mac OS X|Linux) ([^;]+)/;
-                const match = userAgent.match(osRegex);
-                return match ? match[2] : 'Unknown';
-                }
+window.onload = function() {
+  // Get the user agent string
+  const userAgent = navigator.userAgent;
 
-                // Function to get device name based on user agent string
-                function getDeviceName(userAgent) {
-                if (/iPhone/.test(userAgent)) return 'iPhone';
-                if (/iPad/.test(userAgent)) return 'iPad';
-                if (/Android/.test(userAgent)) return 'Android Device';
-                if (/Windows Phone/.test(userAgent)) return 'Windows Phone';
-                if (/Windows NT/.test(userAgent)) return 'Windows PC';
-                if (/Mac OS X/.test(userAgent)) return 'Mac';
-                if (/Linux/.test(userAgent)) return 'Linux';
-                return 'Unknown Device';
-                }
+  // Function to get OS version
+  function getOSVersion(userAgent) {
+    const osRegex = /(Android|iPhone|iPad|Windows Phone|Windows NT|Mac OS X|Linux) ([^;]+)/;
+    const match = userAgent.match(osRegex);
+    return match ? match[2] : 'Unknown';
+  }
 
-                // Get user agent
-                const userAgent = navigator.userAgent;
+  // Function to get device name based on user agent string
+  function getDeviceName(userAgent) {
+    if (/iPhone/.test(userAgent)) return 'iPhone';
+    if (/iPad/.test(userAgent)) return 'iPad';
+    if (/Android/.test(userAgent)) return 'Android Device';
+    if (/Windows Phone/.test(userAgent)) return 'Windows Phone';
+    if (/Windows NT/.test(userAgent)) return 'Windows PC';
+    if (/Mac OS X/.test(userAgent)) return 'Mac';
+    if (/Linux/.test(userAgent)) return 'Linux';
+    return 'Unknown Device';
+  }
 
-                // Get OS version and device name
-                const osVersion = getOSVersion(userAgent);
-                const deviceName = getDeviceName(userAgent);
+  // Get OS version and device name
+  const osVersion = getOSVersion(userAgent);
+  const deviceName = getDeviceName(userAgent);
 
-                // Get device memory information
-                const deviceMemory = navigator.deviceMemory || 'Unknown';
+  // Get device memory information
+  const deviceMemory = navigator.deviceMemory || 'Unknown';
 
-                console.log('Device Name:', deviceName);
-                console.log('OS Version:', osVersion);
-                console.log('Device Memory:', deviceMemory, 'GB');
-                
-                if(deviceName == 'iPhone') {
-                    alert("This Device isn't supported. Use a Windows or Android")
-                    setTimeout(function() {
-                        history.back()
-                    }, 3000)
-                }
-            })
+  console.log('Device Name:', deviceName);
+  console.log('OS Version:', osVersion);
+  console.log('Device Memory:', deviceMemory, 'GB');
+
+  if (deviceName == 'iPhone') {
+    alert("This Device isn't supported. Use a Windows or Android");
+    setTimeout(function() {
+      history.back();
+    }, 3000);
+  }
+};
+
             
             localStorage.clear();
             let oneBtcINPUT = document.getElementById('1')
